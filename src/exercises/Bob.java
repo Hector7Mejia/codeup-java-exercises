@@ -9,9 +9,9 @@ public class Bob {
         String userResponse = sc.nextLine().trim();
         System.out.println(userResponse);
 
-        if (userResponse.endsWith("?")); {
+        if (userResponse.endsWith("?")) {
             System.out.println("Sure");
-        } if (userResponse.endsWith("!")){
+        } else if (userResponse.endsWith("!")){
             System.out.println("Woah, chill out!");
         } else if (userResponse.equals("")){
             System.out.println("Fine. Bro that way");
