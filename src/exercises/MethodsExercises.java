@@ -7,7 +7,7 @@ public class MethodsExercises {
 //        System.out.println(addition(5,5));
 //        System.out.println(subtraction(5,5));
 
-        String awnser="";
+        String answer="";
         do
         {
             Scanner sc = new Scanner(System.in);
@@ -23,9 +23,9 @@ public class MethodsExercises {
                 }
                 System.out.println("Factorial of "+ userResponse +" is: "+fact);
         System.out.println("Continue(y/n)");
-            awnser=sc.next();
+            answer=sc.next();
 
-        }while(awnser.equals("y"));
+        }while(answer.equals("y"));
 
 
     }
