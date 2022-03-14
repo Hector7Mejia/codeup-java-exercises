@@ -28,26 +28,37 @@ public class GradesApplication {
         students.put("timNeut", timmy);
         students.put("zimmyNeut", zimmy);
 
+        System.out.println("Welcome!\nHere are the GitHub usernames of our students:");
+
+        for (String key : students.keySet()) {
+            System.out.print("|" + key + "|  ");
+        }
+        System.out.println();
+
+
+        String userinput = "";
         do {
-            System.out.println("Welcome!\nHere are the GitHub usernames of our students:");
-
-            for (String key : students.keySet()) {
-                System.out.print("|" + key + "|  ");
-            }
-
+            System.out.println();
             System.out.println("What student would you like to see more information on?");
-            String userinput = sc.next();
+            userinput = sc.next();
             if (students.containsKey(userinput)) {
                 Student currentStudent = students.get(userinput);
-                System.out.println(currentStudent.getGradeAverage());
-                System.out.println(currentStudent.getName());
-            } else {
-                System.out.println("wrong try again");
-                System.out.println("Would you like to see another student?");
-            } else if(userinput.contains("y")) {
+                System.out.println("Name: " + currentStudent.getName() + " - " + "GitHub Username: " + userinput);
+                System.out.println("Current Average: " + currentStudent.getGradeAverage());
+                System.out.println();
 
+            } else {
+                System.out.println("wrong, no student found with the GitHub username of " + userinput + ".");
+                System.out.println("Would you like to see another student?");
             }
 
-        } while (true);
+            System.out.println("Continue(y/n)");
+            System.out.println();
+            userinput = sc.next();
+            if (userinput.equals("n")) {
+                System.out.println("Goodbye, and have a wonderful day!");
+            }
+
+        } while (userinput.equals("y"));
     }
 }
