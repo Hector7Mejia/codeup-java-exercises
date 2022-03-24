@@ -6,6 +6,7 @@ public class MethodsExercises {
     public static void main(String[] args) {
 //        System.out.println(addition(5,5));
 //        System.out.println(subtraction(5,5));
+        System.out.println(getInteger(5,7));
 
         String answer="";
         do
@@ -21,7 +22,7 @@ public class MethodsExercises {
                 for(i=1;i<=userResponse;i++){
                     fact=fact*i;
                 }
-                System.out.println("Factorial of "+ userResponse +" is: "+fact);
+                System.out.println("Factorial of "+ userResponse +" is: "+ fact);
         System.out.println("Continue(y/n)");
             answer=sc.next();
 

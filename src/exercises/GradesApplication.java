@@ -39,7 +39,7 @@ public class GradesApplication {
         String userinput = "";
         do {
             System.out.println();
-            System.out.println("What student would you like to see more information on?");
+            System.out.print("What student would you like to see more information on?\n\n >");
             userinput = sc.next();
             if (students.containsKey(userinput)) {
                 Student currentStudent = students.get(userinput);
@@ -49,14 +49,13 @@ public class GradesApplication {
 
             } else {
                 System.out.println("wrong, no student found with the GitHub username of " + userinput + ".");
-                System.out.println("Would you like to see another student?");
+                System.out.print("Would you like to see another student?\n\n >");
             }
 
-            System.out.println("Continue(y/n)");
-            System.out.println();
+            System.out.print("Continue(y/n)\n\n >");
             userinput = sc.next();
             if (userinput.equals("n")) {
-                System.out.println("Goodbye, and have a wonderful day!");
+                System.out.print("Goodbye, and have a wonderful day!");
             }
 
         } while (userinput.equals("y"));

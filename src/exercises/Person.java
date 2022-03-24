@@ -1,6 +1,6 @@
 package exercises;
 
-class Person {
+public class Person {
     // instance variables should be private like String name
     public String firstName;
     public String lastName;
@@ -12,6 +12,11 @@ class Person {
 public Person() {
 
 }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 
     public String getName() {
         return name;
