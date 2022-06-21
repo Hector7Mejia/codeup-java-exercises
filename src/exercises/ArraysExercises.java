@@ -14,9 +14,9 @@ public class ArraysExercises {
         Person[] people = {rick, bob, red};
         Person[] newPeople = addPerson(people, blue);
 
-        for (int i = 0; i < people.length; i += 1) {
-            System.out.println(people[i].getName());
-        }
+//        for (int i = 0; i < people.length; i += 1) {
+//            System.out.println(people[i].getName());
+//        }
 
         for (int i = 0; i < newPeople.length; i += 1) {
             System.out.println(newPeople[i].getName());

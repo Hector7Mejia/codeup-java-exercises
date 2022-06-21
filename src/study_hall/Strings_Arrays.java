@@ -12,7 +12,7 @@ public class Strings_Arrays {
         testString.add("the");
         testString.add("best");
         System.out.println(stringArrayCombiner(testString));
-        drawRectangle(20,3);
+        drawRectangle(4,3);
 
 //        drawRectangle(4, 3) will draw
 //****
@@ -31,10 +31,17 @@ public class Strings_Arrays {
 
     public static void drawRectangle(int width,int height){
         //draw the top
-        for (int i = 0; i < width; i++) {
+        for (int i = 0; i < height; i++) {
+            if(i == 0) {
+                System.out.printf("*");
+                System.out.println("***");
+
+            } else if (i == 2) {
+                System.out.printf("*");
+                System.out.println("***");
+            } else
             System.out.printf("*");
+            System.out.println(" *");
         }
-
-
     }
 }
