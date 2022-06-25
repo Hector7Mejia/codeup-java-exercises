@@ -46,21 +46,37 @@ public class BigDecTest {
                 BigDecimal.valueOf(zeroIndex).divide(BigDecimal.valueOf(arr.size()), 6,       RoundingMode.HALF_UP));
     }
 
-}
+    public static void miniMaxSum(List<Integer> arr) {
+        // Write your code here
+        // long[] longArray = Arrays.stream(arr).asLongStream().toArray();
+        long max = 0, min = 0;
+        Collections.sort(arr);
 
-public class Solution {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        for(int i = 0, j = arr.size()-1; i < arr.size()-1; i++, j--){
+            min += arr.get(i);
+            max += arr.get(j);
+        }
 
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        System.out.print(min + " " + max);
 
-        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
-
-//        Result.plusMinus(arr);
-
-        bufferedReader.close();
     }
 }
+
+
+
+//public class Solution {
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//
+//        int n = Integer.parseInt(bufferedReader.readLine().trim());
+//
+//        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+//                .map(Integer::parseInt)
+//                .collect(toList());
+//
+////        Result.plusMinus(arr);
+//
+//        bufferedReader.close();
+//    }
+//}
 
