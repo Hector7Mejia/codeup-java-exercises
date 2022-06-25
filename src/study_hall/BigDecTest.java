@@ -37,13 +37,13 @@ public class BigDecTest {
             }
         }
         System.out.println(
-                BigDecimal.valueOf(positiveIndex).divide(BigDecimal.valueOf(arr.size()),6,    RoundingMode.HALF_UP));
+                BigDecimal.valueOf(positiveIndex).divide(BigDecimal.valueOf(arr.size()),6,RoundingMode.HALF_UP));
 
         System.out.println(
-                BigDecimal.valueOf(negativeIndex).divide(BigDecimal.valueOf(arr.size()),6,    RoundingMode.HALF_UP));
+                BigDecimal.valueOf(negativeIndex).divide(BigDecimal.valueOf(arr.size()),6,RoundingMode.HALF_UP));
 
         System.out.println(
-                BigDecimal.valueOf(zeroIndex).divide(BigDecimal.valueOf(arr.size()), 6,       RoundingMode.HALF_UP));
+                BigDecimal.valueOf(zeroIndex).divide(BigDecimal.valueOf(arr.size()), 6,RoundingMode.HALF_UP));
     }
 
     public static void miniMaxSum(List<Integer> arr) {
@@ -59,6 +59,11 @@ public class BigDecTest {
 
         System.out.print(min + " " + max);
 
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> test = new ArrayList<Integer>(Arrays.asList(1,1,0,-1,-1));
+        plusMinus(test);
     }
 }
 
