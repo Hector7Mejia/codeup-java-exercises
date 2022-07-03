@@ -106,12 +106,11 @@ public class Meeting {
 
         whenEveryonesFree(arrayOfMeetings);
 
-        for (int i = 0; i < arrayOfMeetings.length; i++) {
-            if(arrayOfMeetings[i].getStartTime() ==
-) {
-
-            }
-        }
+//        for (int i = 0; i < arrayOfMeetings.length; i++) {
+//            if(arrayOfMeetings[i].getStartTime() ==)
+//
+//
+//        }
 
      }
 }
