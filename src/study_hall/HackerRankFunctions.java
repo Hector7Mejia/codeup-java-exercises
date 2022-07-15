@@ -131,7 +131,6 @@ public static void main(String[] args) {
 //    dnaCompliments("tamper");
 //    dnaConverter("GTCAG");
       findTheWord("I like cheese", "sfds fsdfsf fsdf No I like cheese");
-
 }
 
 public static void findTheWord(String s, String t) {
