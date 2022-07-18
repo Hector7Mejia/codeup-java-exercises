@@ -19,6 +19,18 @@ public class MapPractice {
         }
         System.out.println(reversedArray);
     }
+//public static void reverseString(int[] toBeReversed) {
+////    ArrayList<Integer> reversedArray = new ArrayList<>();
+//     int[] reversedArray = new int[toBeReversed.length];
+//    for (int i = toBeReversed.length - 1,j=0; i >= 0; i--,j++) {
+//        reversedArray[j] = toBeReversed[i];
+//    }
+//
+////    for (int i =0; i < toBeReversed.length; i++) {
+////        reversedArray[i] = toBeReversed[i];
+////    }
+//    System.out.println(Arrays.toString(reversedArray));
+//}
 
     static void sortit(int[] arr, int n) {
         for (int i = 0; i < n; i++) {
@@ -61,8 +73,8 @@ public class MapPractice {
         // Append all elements of array to linked list
         // using Collections.addAll() method
 //        Collections.addAll(linkedList, dnu);
-        System.out.println(linkedStrings);
-//        reverseString(intArrayn);
+//        System.out.printf("%s",linkedStrings);
+        reverseString(arr);
 //        mapReverseString(intArrayn);
 
     }
