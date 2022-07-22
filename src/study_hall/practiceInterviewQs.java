@@ -3,6 +3,7 @@ package study_hall;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class practiceInterviewQs {
     public static void main(String[] args) {
@@ -24,24 +25,46 @@ public class practiceInterviewQs {
 
     //get the first string of 0th chars. Add the next one the end of the last String result.
     //remove the first char at 0 then ++ and delete the next char
+    public static String longestString(String[] arraysStrings) {
+        int index = 0;
+        int elementLength = arraysStrings[0].length();
+        for(int i=1; i< arraysStrings.length; i++) {
+            if(arraysStrings[i].length() > elementLength) {
+                index = i; elementLength = arraysStrings[i].length();
+            }
+        }
+
+        return  arraysStrings[index];
+    }
     public static void bullshitLC(String[] stringToStrip) {
         ArrayList<String> a = new ArrayList<>();
         String bucket;
         ArrayList<Character> b = new ArrayList<>();
 
-        while(stringToStrip.length != 0) {
+//       String bestString = longestString(stringToStrip);
+        boolean contains = true;
+
+        while(contains) {
             for (int i = 0; i < stringToStrip.length; i++) {
+                System.out.println(stringToStrip[1]);
 
                 for (int j = 0; j < 4; j++) {
                     if(stringToStrip[j].isEmpty()) {
-                        continue;
+                         contains = Arrays.stream(stringToStrip).anyMatch(x -> x.equals("") || x.equals(" "));
                     }
+//                    if(Arrays.asList(stringToStrip).contains(" ")) {
+//                        bucket = b + stringToStrip[j];
+//                        System.out.println(bucket);
+//                        System.out.println(b);
+//                        stringToStrip = new String[0];
+//                        break;
+//                    }
                     b.add(stringToStrip[j].charAt(0));
-                    System.out.println(b);
                     stringToStrip[j] = stringToStrip[j].substring(1);
                 }
-//                System.out.println(Arrays.toString(stringToStrip).);
+//                System.out.println(Arrays.toString(stringToStrip).trim());
             }
+            System.out.println(b);
         }
 //        String string = new String(String.valueOf(b));
 //        System.out.println(string);
@@ -55,6 +78,8 @@ public class practiceInterviewQs {
     //
     //For a = [25, 2, 3, 57, 38, 41], the output should be solution(a) = [2, 3, 5].
 
+
+
     //Given an integer n and an array a of length n, your task is to apply the following mutation to a:
     //
     //Array a mutates into a new array b of length n.
@@ -63,6 +88,7 @@ public class practiceInterviewQs {
     //Example
     //
     //For n = 5 and a = [4, 0, 1, -2, 3], the output should be solution(n, a) = [4, 5, -1, 2, 1].
+
 
     //For queryType = ["insert", "addToValue", "get", "insert", "addToKey", "addToValue", "get"] and query = [[1, 2], [2], [1], [2, 3], [1], [-1], [3]], the output should be solution(queryType, query) = 6.
     //
