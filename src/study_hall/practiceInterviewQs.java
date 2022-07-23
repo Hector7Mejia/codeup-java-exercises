@@ -7,10 +7,11 @@ import java.util.stream.IntStream;
 
 public class practiceInterviewQs {
     public static void main(String[] args) {
-        String[] arr = {"Daisy", "Rose", "Hyacinth", "Poppy"};
+        String[] arr = {"Daisy", "Hyacinth", "Rose" , "Poppy"};
 
         bullshitLC(arr);
 
+//        System.out.println(longestString(arr));
     }
     //For arr = ["Daisy", "Rose", "Hyacinth", "Poppy"], the output should be solution(arr) = "DRHPaoyoisapsecpyiynth".
     //Daisy |Rose |Hyacinth| Poppy
@@ -25,58 +26,42 @@ public class practiceInterviewQs {
 
     //get the first string of 0th chars. Add the next one the end of the last String result.
     //remove the first char at 0 then ++ and delete the next char
-    public static String longestString(String[] arraysStrings) {
+    public static int longestString(String[] arraysStrings) {
         int index = 0;
         int elementLength = arraysStrings[0].length();
+
         for(int i=1; i< arraysStrings.length; i++) {
             if(arraysStrings[i].length() > elementLength) {
                 index = i; elementLength = arraysStrings[i].length();
             }
         }
 
-        return  arraysStrings[index];
+        return  elementLength;
     }
     public static void bullshitLC(String[] stringToStrip) {
-        ArrayList<String> a = new ArrayList<>();
-        String bucket;
         ArrayList<Character> b = new ArrayList<>();
+        StringBuilder bucket = new StringBuilder();
+        int maxIteration = longestString(stringToStrip);
 
-//       String bestString = longestString(stringToStrip);
-        boolean contains = true;
 
-        while(contains) {
-            for (int i = 0; i < stringToStrip.length; i++) {
-                System.out.println(stringToStrip[1]);
+            for (int i = 0; i < maxIteration; i++) {
 
-                for (int j = 0; j < 4; j++) {
-                    if(stringToStrip[j].isEmpty()) {
-                         contains = Arrays.stream(stringToStrip).anyMatch(x -> x.equals("") || x.equals(" "));
+                for (int j = 0; j < stringToStrip.length; j++) {
+
+                    String currentName = stringToStrip[j];
+                    if(currentName.charAt(i) > 0 ) {
+                        bucket.append(currentName.charAt(i));
                     }
-//                    if(Arrays.asList(stringToStrip).contains(" ")) {
-//                        bucket = b + stringToStrip[j];
-//                        System.out.println(bucket);
-//                        System.out.println(b);
-//                        stringToStrip = new String[0];
-//                        break;
-//                    }
-                    b.add(stringToStrip[j].charAt(0));
-                    stringToStrip[j] = stringToStrip[j].substring(1);
+//                    b.add(stringToStrip[j].charAt(0));
+//                    stringToStrip[j] = stringToStrip[j].substring(1);
+//                    System.out.println(stringToStrip[j]);
+
+
                 }
-//                System.out.println(Arrays.toString(stringToStrip).trim());
+
             }
-            System.out.println(b);
-        }
-//        String string = new String(String.valueOf(b));
-//        System.out.println(string);
-//        return bucket;
+        System.out.println(bucket);
     }
-
-
-    //Given an array of integers a, your task is to calculate the digits that occur the most number of times in the array. Return the array of these digits in ascending order.
-    //
-    //Example
-    //
-    //For a = [25, 2, 3, 57, 38, 41], the output should be solution(a) = [2, 3, 5].
 
 
 
