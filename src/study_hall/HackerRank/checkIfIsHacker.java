@@ -1,7 +1,6 @@
 package study_hall.HackerRank;
 
-import java.util.HashMap;
-import java.util.Locale;
+import java.util.*;
 
 public class checkIfIsHacker {
 private static String checkIfHacker(String s) {
@@ -24,15 +23,25 @@ private static String checkIfHacker(String s) {
         int j = 0;
         String answer = "";
         String albet = "abcdefghijklmnopqrstuvwxyz";
-        int[] al = new int[albet.length()];
         String lowercaseS = s.replaceAll("\\s","").toLowerCase();
+        int[] al = new int[lowercaseS.length()];
         HashMap<Character,Integer> mapBet = new HashMap<>();
 //        System.out.println(lowercaseS);
-        for (int i = 0; i < albet.length(); i++) {
-            al[i] = albet.charAt(i);
+        for (int i = 0; i < lowercaseS.length(); i++) {
+            al[i] = lowercaseS.charAt(i);
             System.out.println(al[i]);
         }
+        Arrays.sort(al);
+        Set<Integer> setString = new LinkedHashSet<>();
+        for(int i=0;i<al.length;i++){
+            setString.add(al[i]);
+        }
+        System.out.println(setString);
+        for (int i = 0; i < setString.size(); i++) {
+            if(setString.)
+        }
         //if 97-122 present the whole alphabet is thur
+        //make another set<> using the alphabet and then comare it to the set  called setString using contains all done
 
 //        if(lowercaseS.length() < albet.length()) {
 //            answer = "not pangram";
@@ -44,7 +53,7 @@ private static String checkIfHacker(String s) {
 //            System.out.println(i);
         }
 //        System.out.println(mapBet);
-        for (int i = 0; i < lowercaseS.length(); i++) {
+//        for (int i = 0; i < lowercaseS.length(); i++) {
 //            System.out.println(mapBet.containsKey(lowercaseS.charAt(i)));
 //            if(!mapBet.containsKey(albet.charAt(i))) {
 //                answer = "not pangram";
@@ -52,11 +61,11 @@ private static String checkIfHacker(String s) {
 //
 //            }else{
                 answer = "pangram";
-            }
+          //  }
         return answer;
         }
 
 public static void main(String[] args) {
-    System.out.println(pangrams("We promptly judged antique ivory buckles for the next prize"));;
+    System.out.println(pangrams("We promptly judged antique ivory buckles for the prize"));;
 }
         }
