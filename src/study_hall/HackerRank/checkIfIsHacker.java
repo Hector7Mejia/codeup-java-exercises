@@ -19,8 +19,6 @@ private static String checkIfHacker(String s) {
 }
 
     public static String pangrams(String s) {
-        // Write your code here
-        int j = 0;
         String answer = "";
         String albet = "abcdefghijklmnopqrstuvwxyz";
         String lowercaseS = s.replaceAll("\\s","").toLowerCase();
@@ -29,7 +27,6 @@ private static String checkIfHacker(String s) {
 //        System.out.println(lowercaseS);
         for (int i = 0; i < lowercaseS.length(); i++) {
             al[i] = lowercaseS.charAt(i);
-            System.out.println(al[i]);
         }
         Arrays.sort(al);
         Set<Integer> setString = new LinkedHashSet<>();
@@ -37,31 +34,11 @@ private static String checkIfHacker(String s) {
             setString.add(al[i]);
         }
         System.out.println(setString);
-        for (int i = 0; i < setString.size(); i++) {
-            if(setString.)
+        if(setString.size() == 26) {
+            answer = "pangram";
+        } else {
+            answer = "not pangram";
         }
-        //if 97-122 present the whole alphabet is thur
-        //make another set<> using the alphabet and then comare it to the set  called setString using contains all done
-
-//        if(lowercaseS.length() < albet.length()) {
-//            answer = "not pangram";
-//            return answer;
-//        }
-
-        for (int i = 0; i < lowercaseS.length(); i++) {
-            mapBet.put(lowercaseS.charAt(i), i);
-//            System.out.println(i);
-        }
-//        System.out.println(mapBet);
-//        for (int i = 0; i < lowercaseS.length(); i++) {
-//            System.out.println(mapBet.containsKey(lowercaseS.charAt(i)));
-//            if(!mapBet.containsKey(albet.charAt(i))) {
-//                answer = "not pangram";
-//                break;
-//
-//            }else{
-                answer = "pangram";
-          //  }
         return answer;
         }
 
