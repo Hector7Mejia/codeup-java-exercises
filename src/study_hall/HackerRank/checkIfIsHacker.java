@@ -20,7 +20,6 @@ private static String checkIfHacker(String s) {
 
     public static String pangrams(String s) {
         String answer = "";
-        String albet = "abcdefghijklmnopqrstuvwxyz";
         String lowercaseS = s.replaceAll("\\s","").toLowerCase();
         int[] al = new int[lowercaseS.length()];
         HashMap<Character,Integer> mapBet = new HashMap<>();
