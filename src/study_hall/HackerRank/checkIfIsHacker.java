@@ -22,7 +22,7 @@ private static String checkIfHacker(String s) {
         String answer = "";
         String lowercaseS = s.replaceAll("\\s","").toLowerCase();
         int[] al = new int[lowercaseS.length()];
-        HashMap<Character,Integer> mapBet = new HashMap<>();
+//        HashMap<Character,Integer> mapBet = new HashMap<>();
 //        System.out.println(lowercaseS);
         for (int i = 0; i < lowercaseS.length(); i++) {
             al[i] = lowercaseS.charAt(i);

@@ -16,22 +16,29 @@ public class weightedStrings {
     public static void hashS(String f) {
         HashMap<Character,Integer> d = new HashMap<>();
         int doit = 0;
+        int nextDoIt;
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-        for (int i = 0; i < f.length(); i++) {
-            d.put(f.charAt(i),i);
-//            doit += i;
+        for (int i = 0; i < alphabet.length(); i++) {
+            d.put(alphabet.charAt(i),i +1);
         }
-        doit = d.get('c');
-        System.out.println(doit + 2);
-//        System.out.println(doit);
 
+        System.out.println(doit);
+        for (int i = 0; i < f.length(); i++) {
+            doit = d.get(f.charAt(i));
+            nextDoIt = d.get(f.charAt(i));
+            if(doit == nextDoIt) {
+
+            }
+            System.out.println(doit);
+        }
 
     }
 
     public static void main(String[] args) {
-        List<Integer> ban = new ArrayList<>();
-
+//        List<Integer> ban = new ArrayList<>();
 //        doe("aaabbbbcccddd", ban);
+
         hashS("abc");
     }
 }
