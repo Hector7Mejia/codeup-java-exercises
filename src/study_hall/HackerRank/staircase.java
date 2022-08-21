@@ -16,10 +16,9 @@ public class staircase {
                 }
             }
             System.out.print("\n");
-
         }
     }
     public static void main(String[] args) {
-
+        stairs(6);
     }
 }
