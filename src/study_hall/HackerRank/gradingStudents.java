@@ -12,8 +12,8 @@ public class gradingStudents {
         List<Integer> bat = new ArrayList<>();
 
         for (int i = 0; i < grades.size(); i++) {
-            compare = (grades.get(i) / 5) +1;
-            sub = 5 * compare;
+            compare = ((84 / 5) +1) * 5;
+//            sub = 5 * compare;
 
             if(grades.get(i) < 40) {
                 bat.add(grades.get(i));
@@ -23,7 +23,7 @@ public class gradingStudents {
                 continue;
             }
             else if(grades.get(i) % 5 != 0 ) {
-                bat.add(sub);
+                bat.add(compare);
             }
         }
 
@@ -43,5 +43,6 @@ public class gradingStudents {
 
 
         System.out.println(gradingStudents(ban));
+//        System.out.println(((84 / 5) +1) * 5);
     }
 }
