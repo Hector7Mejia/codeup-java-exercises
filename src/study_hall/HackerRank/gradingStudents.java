@@ -17,17 +17,20 @@ public class gradingStudents {
 
             if(grades.get(i) < 40) {
                 bat.add(grades.get(i));
+//                grades.set(i,grades.get(i));
                 continue;
-            }else if( sub - grades.get(i) >= 3) {
+            }else if( compare - grades.get(i) >= 3 ) {
                 bat.add(grades.get(i));
+//                grades.set(i,grades.get(i));
                 continue;
             }
             else if(grades.get(i) % 5 != 0 ) {
                 bat.add(compare);
+                grades.set(i,compare);
             }
         }
 
-        return bat;
+        return grades;
     }
 
     public static void main(String[] args) {
