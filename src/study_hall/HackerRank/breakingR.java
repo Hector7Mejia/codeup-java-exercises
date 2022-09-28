@@ -29,7 +29,19 @@ public class breakingR {
     }
 
     public static void main(String[] args) {
-        breakingRecords()
+        List<Integer> ik = new ArrayList<>();
+        ik.add(9);
+        ik.add(10);
+        ik.add(5);
+        ik.add(20);
+        ik.add(20);
+        ik.add(4);
+        ik.add(5);
+        ik.add(2);
+        ik.add(25);
+        ik.add(1);
+
+        breakingRecords(ik);
     }
 
 }
