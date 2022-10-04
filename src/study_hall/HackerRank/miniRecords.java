@@ -1,5 +1,7 @@
 package study_hall.HackerRank;
 
+import java.util.List;
+
 public class miniRecords {
     public static List<Integer> breakingRecords(List<Integer> scores) {
         //Write your code here
